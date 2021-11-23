@@ -2,6 +2,7 @@ import Block from './index';
 import { BlockToolData, ToolConfig } from '../../../types/tools';
 import { SavedData } from '../../../types/data-formats';
 import { BlockAPI as BlockAPIInterface } from '../../../types/api';
+import { SanitizerConfig } from '../../../types/configs/sanitizer-config';
 
 /**
  * Constructs new BlockAPI object
@@ -38,6 +39,15 @@ function BlockAPI(
      */
     get config(): ToolConfig {
       return block.config;
+    },
+
+    /**
+     * Tool sanitize config
+     *
+     * @returns {SanitizerConfig}
+     */
+    get sanitizeConfig(): SanitizerConfig {
+      return block.sanitize;
     },
 
     /**

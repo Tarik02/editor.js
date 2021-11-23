@@ -1,5 +1,6 @@
 import {BlockToolData, ToolConfig} from '../tools';
 import {SavedData} from '../data-formats';
+import {SanitizerConfig} from '../configs/sanitizer-config';
 
 /**
  * @interface BlockAPI Describes Block API methods and properties
@@ -19,6 +20,12 @@ export interface BlockAPI {
    * Tool config passed on Editor's initialization
    */
   readonly config: ToolConfig;
+
+  /**
+   * Tool sanitize config
+   *
+   */
+  readonly sanitizeConfig: SanitizerConfig;
 
   /**
    * Wrapper of Tool's HTML element
